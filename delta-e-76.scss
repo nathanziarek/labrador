@@ -1,0 +1,8 @@
+@import "to-cielab";
+
+@function delta-e-76($c1, $c2) {
+	$x1: to-cielab($c1);
+	$x2: to-cielab($c2);
+
+	@return sqrt(pow(nth($x2, 1) - nth($x1, 1), 2) + pow(nth($x2, 2) - nth($x1, 2), 2) + pow(nth($x2, 3) - nth($x1, 3), 2));
+}
