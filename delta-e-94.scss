@@ -1,0 +1,17 @@
+@import "to-cielab";
+
+@function delta-e-94($c1, $c2) {
+	$x1: to-cielab($c1);
+	$x2: to-cielab($c2);
+	$L: nth($x1, 1) - nth($x2, 1);
+	$d1: sqrt(pow(nth($x1, 2), 2) + pow(nth($x1, 3), 2));
+	$d2: sqrt(pow(nth($x2, 2), 2) + pow(nth($x2, 3), 2));
+	$dd: $d1 - $d2;
+	$aT4: 1 + 0.045 * $d1;
+	$a: $dd / $aT4;
+	$bT1: sqrt(pow(nth($x1, 2) - nth($x2, 2), 2) + pow(nth($x1, 3) - nth($x2, 3), 2) - pow($dd, 2));
+	$bT2: 1 + 0.015 * $d1;
+	$b: $bT1 / $bT2;
+
+	@return sqrt(pow($L, 2) + pow($a, 2) + pow($b, 2));
+}
