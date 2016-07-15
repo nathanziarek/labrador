@@ -1,0 +1,29 @@
+{
+  "name": "labrador",
+  "version": "1.0.0",
+  "description": "A small collection of functions for converting to CIE LAB colorspace and calculating color differences using delta-e.",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanziarek/labrador.git"
+  },
+  "keywords": [
+    "delta",
+    "e",
+    "scss",
+    "cie",
+    "lab",
+    "convert"
+  ],
+  "author": "Nathan Ziarek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathanziarek/labrador/issues"
+  },
+  "homepage": "https://github.com/nathanziarek/labrador#readme"
+}
