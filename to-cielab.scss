@@ -1,3 +1,13 @@
+/**
+ * Convert to CIE LAB color space
+ * https://en.wikipedia.org/wiki/Lab_color_space
+ * Usage...
+ * to-cielab({color});
+ * Returns...
+ * ...a three element SASS list corresponding to
+ * L, a and b.
+* */
+
 @function to-cielab($c) {
 	$r: red($c) / 255;
 	$g: green($c) / 255;
